@@ -1,22 +1,42 @@
-h1{
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
+h1 {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
 }
 
 .candle {
-  height: 150px;
-  width: 50px;
-  background-color: rgb(206, 209, 185);
+    margin: auto;
+    height: 400px;
+    width: 150px;
+    background-color: bisque;
+}
+
+.wick {
+    margin: auto;
+    z-index: 1;
+    height: 25px;
+    width: 5px;
+    background: black;
 }
 
 .flame {
-	width: 0;
-	height: 0;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	border-bottom: 50px solid rgb(199, 16, 16);
+    /* margin: auto;
+    width: 200px;
+    height: 300px;
+    shape-outside: polygon(0 0, 0 300px, 200px 300px);
+     border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 100px solid; 
+    color: red;
+    background: red; */
+    margin: auto;
+    z-index: 2;
+    shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+    clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+    height: 200px;
+    width: 100px;
+    background: linear-gradient( yellow, orange, red);
 }
