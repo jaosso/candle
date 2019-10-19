@@ -1,0 +1,96 @@
+.shine {
+    visibility: hidden;
+    z-index: 0;
+    position: relative;
+    margin-top: -675px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    background: rgba(245, 229, 4, 0.6);
+    animation: shine_flicker 2s linear infinite;
+}
+
+.candle {
+    z-index: 1;
+    position: relative;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    height: 400px;
+    width: 150px;
+    background: linear-gradient(90deg, rgb(129, 92, 5) 0%, bisque 50%, rgb(129, 92, 5) 100%);
+}
+
+.flame {
+    visibility: hidden;
+    z-index: 2;
+    position: relative;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+    clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+    height: 200px;
+    width: 100px;
+    background: radial-gradient(circle, yellow, red);
+    animation: flame_flicker 2s linear infinite;
+}
+
+.wick {
+    z-index: 3;
+    position: relative;
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 25px;
+    width: 5px;
+    background: black;
+}
+
+.candle-container {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    height: 600px;
+    width: 400px;
+}
+
+@keyframes flame_flicker {
+    0% {
+        shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+        clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+        /* transform: translate(0); */
+    }
+    25% {
+        shape-outside: polygon(60px 0, 100px 150px, 50px 200px, 0 150px);
+        clip-path: polygon(60px 0, 100px 150px, 50px 200px, 0 150px);
+        /* transform: translate(-1px); */
+    }
+    50% {
+        shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+        clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
+        /* transform: translate(0); */
+    }
+    75% {
+        shape-outside: polygon(40px 0, 100px 150px, 50px 200px, 0 150px);
+        clip-path: polygon(40px 0, 100px 150px, 50px 200px, 0 150px);
+        /* transform: translate(1px); */
+    }
+}
+
+@keyframes shine_flicker {
+    0% {
+        border-radius: 50%;
+    }
+    25% {
+        border-radius: 45%;
+    }
+    50% {
+        border-radius: 47%;
+    }
+    75% {
+        border-radius: 45%;
+    }
+}
