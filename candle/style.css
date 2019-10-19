@@ -2,12 +2,12 @@
     visibility: hidden;
     z-index: 0;
     position: relative;
-    margin-top: -675px;
+    margin-top: -170%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    height: 400px;
-    width: 400px;
+    height: 66.66%;
+    width: 100%;
     background: rgba(245, 229, 4, 0.6);
     animation: shine_flicker 2s linear infinite;
 }
@@ -18,8 +18,8 @@
     margin-top: auto;
     margin-right: auto;
     margin-left: auto;
-    height: 400px;
-    width: 150px;
+    height: 66.66%;
+    width: 37.5%;
     background: linear-gradient(90deg, rgb(129, 92, 5) 0%, bisque 50%, rgb(129, 92, 5) 100%);
 }
 
@@ -27,13 +27,13 @@
     visibility: hidden;
     z-index: 2;
     position: relative;
-    margin-top: 50px;
+    margin-top: 8.33%;
     margin-left: auto;
     margin-right: auto;
-    shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-    clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-    height: 200px;
-    width: 100px;
+    shape-outside: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
+    clip-path: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
+    height: 33.33%;
+    width: 25%;
     background: radial-gradient(circle, yellow, red);
     animation: flame_flicker 2s linear infinite;
 }
@@ -41,42 +41,46 @@
 .wick {
     z-index: 3;
     position: relative;
-    margin-top: -25px;
+    margin-top: -6%;
     margin-left: auto;
     margin-right: auto;
-    height: 25px;
-    width: 5px;
+    height: 4.2%;
+    width: 1.25%;
     background: black;
 }
 
 .candle-container {
-    margin-top: auto;
-    margin-right: auto;
-    margin-left: auto;
-    height: 600px;
-    width: 400px;
+    margin: auto;
+    margin-top: 20vh;
+    height: 60vh;
+    width: 40vh;
+    /* height: 600px;
+    width: 400px; */
+}
+
+.jumbotron {
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    background: radial-gradient(circle, lightblue, blue);
 }
 
 @keyframes flame_flicker {
     0% {
-        shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-        clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-        /* transform: translate(0); */
+        shape-outside: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
+        clip-path: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
     }
     25% {
-        shape-outside: polygon(60px 0, 100px 150px, 50px 200px, 0 150px);
-        clip-path: polygon(60px 0, 100px 150px, 50px 200px, 0 150px);
-        /* transform: translate(-1px); */
+        shape-outside: polygon(55% 0, 100% 75%, 50% 100%, 0 75%);
+        clip-path: polygon(55% 0, 100% 75%, 50% 100%, 0 75%);
     }
     50% {
-        shape-outside: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-        clip-path: polygon(50px 0, 100px 150px, 50px 200px, 0 150px);
-        /* transform: translate(0); */
+        shape-outside: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
+        clip-path: polygon(50% 0, 100% 75%, 50% 100%, 0 75%);
     }
     75% {
-        shape-outside: polygon(40px 0, 100px 150px, 50px 200px, 0 150px);
-        clip-path: polygon(40px 0, 100px 150px, 50px 200px, 0 150px);
-        /* transform: translate(1px); */
+        shape-outside: polygon(45% 0, 100% 75%, 50% 100%, 0 75%);
+        clip-path: polygon(45% 0, 100% 75%, 50% 100%, 0 75%);
     }
 }
 
